@@ -4,3 +4,41 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gameboard {
+	display: grid;
+	flex: 1;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: repeat(9, 1fr);
+	gap: 1px;
+	border: 1px solid black;
+	background-color: black;
+	aspect-ratio: 1 / 1;
+	max-width: 90vmin;
+}
+
+.space {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: xxx-large;
+}
+
+.space {
+	background-color: white;
+	user-select: none;
+}
+
+.hit {
+	background-color: #ffcccc;
+}
+
+.miss {
+	background-color: #cccccc;
+}
