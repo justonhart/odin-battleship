@@ -6,21 +6,32 @@ body {
 }
 
 body {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	text-align: center;
+	margin: 0 5%;
+}
+
+.container {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+}
+
+.center {
+	grid-column: 2 / 3;
 }
 
 .gameboard {
 	display: grid;
-	flex: 1;
 	grid-template-columns: repeat(9, 1fr);
 	grid-template-rows: repeat(9, 1fr);
 	gap: 1px;
 	border: 1px solid black;
 	background-color: black;
 	aspect-ratio: 1 / 1;
-	max-width: 90vmin;
+	width: min(100%, 65vmin);
 }
 
 .space {
@@ -28,9 +39,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	font-size: xxx-large;
-}
-
-.space {
 	background-color: white;
 	user-select: none;
 }
@@ -41,4 +49,8 @@ body {
 
 .miss {
 	background-color: #cccccc;
+}
+
+.hidden {
+	display: none;
 }
